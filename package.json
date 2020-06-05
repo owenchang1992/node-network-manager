@@ -4,7 +4,7 @@
   "description": "Control network by node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/owenchang1992/node_network_manager/issues"
   },
-  "homepage": "https://github.com/owenchang1992/node_network_manager#readme"
+  "homepage": "https://github.com/owenchang1992/node_network_manager#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
 }
