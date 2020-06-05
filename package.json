@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/owenchang1992/node_network_manager#readme",
   "devDependencies": {
+    "eslint": "^7.1.0",
     "jest": "^26.0.1"
-  }
+  },
+  "dependencies": {}
 }
