@@ -32,9 +32,21 @@ describe('Test nmcli device function', () => {
     }) 
 })
 
-describe('Test nmcli wifiRescan function', () => {
+describe('Test nmcli wifiList function', () => {
     it('Response contents would be null', () => {
-        nodeNmcli.wifiRescan()
-            .catch((err) => {console.error('Test nmcli rescan function', err)})
+        nodeNmcli.wifiList()
+            .then((res) => {
+                expect(res[0]).toEqual(expect.objectContaining({
+                    inuse: expect.any(String),
+                    ssid: expect.any(String),
+                    mode: expect.any(String),
+                    chan: expect.any(String),
+                    rate: expect.any(String),
+                    signal: expect.any(String),
+                    bars: expect.any(String),
+                    security: expect.any(String)
+                }))
+            })
+            .catch((err) => {console.error('Test nmcli device function', err)})
     }) 
 })
