@@ -32,9 +32,9 @@ describe('Test nmcli device function', () => {
     }) 
 })
 
-describe('Test nmcli rescan function', () => {
+describe('Test nmcli wifiRescan function', () => {
     it('Response contents would be null', () => {
-        nodeNmcli.rescan()
+        nodeNmcli.wifiRescan()
             .catch((err) => {console.error('Test nmcli rescan function', err)})
     }) 
 })
