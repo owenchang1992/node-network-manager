@@ -2,7 +2,7 @@ const Nmcli = require('../lib/nmcli');
 
 const nodeNmcli = new Nmcli()
 
-describe('test nmcli radio function', () => {
+describe('Test nmcli radio function', () => {
     it('Response should have WIFIHW, WIFI, WWANHW, WWAN properties', () => {
         nodeNmcli.radio()
             .then((res) => {
@@ -13,5 +13,21 @@ describe('test nmcli radio function', () => {
                     WWAN: expect.any(String)
                 }))
             })
+            .catch((err) => {console.error('Test nmcli radio function', err)})
     })    
+})
+
+describe('Test nmcli device function', () => {
+    it('Response contents should have device, type, state, connection properties', () => {
+        nodeNmcli.device()
+            .then((res) => {
+                expect(res[0]).toEqual(expect.objectContaining({
+                    device: expect.any(String),
+                    type: expect.any(String),
+                    state: expect.any(String),
+                    connection: expect.any(String)
+                }))
+            })
+            .catch((err) => {console.error('Test nmcli device function', err)})
+    }) 
 })
