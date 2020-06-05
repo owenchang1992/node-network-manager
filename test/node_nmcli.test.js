@@ -31,3 +31,10 @@ describe('Test nmcli device function', () => {
             .catch((err) => {console.error('Test nmcli device function', err)})
     }) 
 })
+
+describe('Test nmcli rescan function', () => {
+    it('Response contents would be null', () => {
+        nodeNmcli.rescan()
+            .catch((err) => {console.error('Test nmcli rescan function', err)})
+    }) 
+})
