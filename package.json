@@ -1,5 +1,5 @@
 {
-  "name": "node_network_manager",
+  "name": "node-network-manager",
   "version": "1.0.0",
   "description": "Control network by node",
   "main": "index.js",
