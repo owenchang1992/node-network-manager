@@ -50,3 +50,13 @@ describe('Test nmcli wifiList function', () => {
             .catch((err) => {console.error('Test nmcli device function', err)})
     }) 
 })
+
+// describe('Test nmcli wifiConnect function', () => {
+//     it('Response contents would be null', () => {
+//         return nodeNmcli.wifiConnect('MediCam_DFD26A', '1234567890')
+//             .then((res) => {
+//                 expect(res.includes('successfully activated')).toEqual(true)
+//             })
+//             .catch((err) => {console.error('Test nmcli device function', err)})
+//     }) 
+// })
